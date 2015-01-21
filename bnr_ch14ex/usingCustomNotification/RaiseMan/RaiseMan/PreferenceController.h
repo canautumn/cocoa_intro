@@ -13,11 +13,11 @@ extern NSString * const EmptyDocKey;
 extern NSString * const ColorChangeNotification;
 
 @interface PreferenceController : NSWindowController {
-//    IBOutlet NSColorWell *_colorWell;
+    IBOutlet NSColorWell *_colorWell;
 //    IBOutlet NSButton *_checkBox;
 }
 
-- (IBAction)changeBackgroundColor:(id)sender;
+//- (IBAction)changeBackgroundColor:(id)sender;
 //- (IBAction)changeNewEmptyDoc:(id)sender;
 
 - (IBAction)resetPreferences:(id)sender;

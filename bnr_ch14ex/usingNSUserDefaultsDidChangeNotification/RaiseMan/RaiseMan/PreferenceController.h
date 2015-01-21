@@ -17,7 +17,7 @@ extern NSString * const ColorChangeNotification;
 //    IBOutlet NSButton *_checkBox;
 }
 
-- (IBAction)changeBackgroundColor:(id)sender;
+//- (IBAction)changeBackgroundColor:(id)sender;
 //- (IBAction)changeNewEmptyDoc:(id)sender;
 
 - (IBAction)resetPreferences:(id)sender;

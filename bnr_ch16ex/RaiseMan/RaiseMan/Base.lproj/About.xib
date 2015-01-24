@@ -14,8 +14,8 @@
         <window title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" animationBehavior="default" id="bZC-qY-KdF" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="1636" y="-68" width="319" height="114"/>
-            <rect key="screenRect" x="1440" y="-180" width="1920" height="1057"/>
+            <rect key="contentRect" x="471" y="587" width="319" height="114"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="C5Z-Ss-bNb">
                 <rect key="frame" x="0.0" y="0.0" width="319" height="114"/>
                 <autoresizingMask key="autoresizingMask"/>

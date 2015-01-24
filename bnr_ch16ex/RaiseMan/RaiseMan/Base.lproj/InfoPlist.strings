@@ -1,3 +1,4 @@
-/* No Localized Strings */
 
-CFBundleDisplayName = "name";
+"CFBundleDisplayName" = "RaiseMan";
+
+"CFBundleName" = "RaiseMan";

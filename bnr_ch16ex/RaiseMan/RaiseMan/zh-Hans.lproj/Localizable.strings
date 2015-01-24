@@ -1,7 +1,25 @@
-/* 
-  Localizable.strings
-  RaiseMan
+/* Add Person */
+"ADD_PERSON" = "添加员工";
 
-  Created by Can on 15/1/23.
-  Copyright (c) 2015年 Can. All rights reserved.
-*/
+/* Cancel */
+"CANCEL" = "取消";
+
+/* Edit */
+"EDIT" = "编辑";
+
+/* Keep, but no raise */
+"KEEPNORAISE" = "保留，但涨幅归零";
+
+/* Remove */
+"REMOVE" = "移除";
+
+/* %lu people will be removed. */
+"REMOVE_INF" = "%lu 名员工将被移除";
+
+/* Do you really want to remove these people? */
+"REMOVE_MSG" = "确定要移除这些员工吗？";
+
+/* Remove Person */
+"REMOVE_PERSON" = "移除员工";
+
+

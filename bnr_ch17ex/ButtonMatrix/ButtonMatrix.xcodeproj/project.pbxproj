@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		361D86921A74C6D5006BA162 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 361D86911A74C6D5006BA162 /* AppDelegate.m */; };
+		361D86941A74C6D5006BA162 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 361D86931A74C6D5006BA162 /* main.m */; };
+		361D86961A74C6D5006BA162 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 361D86951A74C6D5006BA162 /* Images.xcassets */; };
+		361D86991A74C6D5006BA162 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 361D86971A74C6D5006BA162 /* MainMenu.xib */; };
+		361D86A51A74C6D5006BA162 /* ButtonMatrixTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 361D86A41A74C6D5006BA162 /* ButtonMatrixTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		361D869F1A74C6D5006BA162 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 361D86831A74C6D5006BA162 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 361D868A1A74C6D5006BA162;
+			remoteInfo = ButtonMatrix;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		361D868B1A74C6D5006BA162 /* ButtonMatrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ButtonMatrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		361D868F1A74C6D5006BA162 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		361D86901A74C6D5006BA162 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		361D86911A74C6D5006BA162 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		361D86931A74C6D5006BA162 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		361D86951A74C6D5006BA162 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		361D86981A74C6D5006BA162 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		361D869E1A74C6D5006BA162 /* ButtonMatrixTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButtonMatrixTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		361D86A31A74C6D5006BA162 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		361D86A41A74C6D5006BA162 /* ButtonMatrixTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonMatrixTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		361D86881A74C6D5006BA162 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		361D869B1A74C6D5006BA162 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		361D86821A74C6D5006BA162 = {
+			isa = PBXGroup;
+			children = (
+				361D868D1A74C6D5006BA162 /* ButtonMatrix */,
+				361D86A11A74C6D5006BA162 /* ButtonMatrixTests */,
+				361D868C1A74C6D5006BA162 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		361D868C1A74C6D5006BA162 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				361D868B1A74C6D5006BA162 /* ButtonMatrix.app */,
+				361D869E1A74C6D5006BA162 /* ButtonMatrixTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		361D868D1A74C6D5006BA162 /* ButtonMatrix */ = {
+			isa = PBXGroup;
+			children = (
+				361D86901A74C6D5006BA162 /* AppDelegate.h */,
+				361D86911A74C6D5006BA162 /* AppDelegate.m */,
+				361D86951A74C6D5006BA162 /* Images.xcassets */,
+				361D86971A74C6D5006BA162 /* MainMenu.xib */,
+				361D868E1A74C6D5006BA162 /* Supporting Files */,
+			);
+			path = ButtonMatrix;
+			sourceTree = "<group>";
+		};
+		361D868E1A74C6D5006BA162 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				361D868F1A74C6D5006BA162 /* Info.plist */,
+				361D86931A74C6D5006BA162 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		361D86A11A74C6D5006BA162 /* ButtonMatrixTests */ = {
+			isa = PBXGroup;
+			children = (
+				361D86A41A74C6D5006BA162 /* ButtonMatrixTests.m */,
+				361D86A21A74C6D5006BA162 /* Supporting Files */,
+			);
+			path = ButtonMatrixTests;
+			sourceTree = "<group>";
+		};
+		361D86A21A74C6D5006BA162 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				361D86A31A74C6D5006BA162 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		361D868A1A74C6D5006BA162 /* ButtonMatrix */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 361D86A81A74C6D5006BA162 /* Build configuration list for PBXNativeTarget "ButtonMatrix" */;
+			buildPhases = (
+				361D86871A74C6D5006BA162 /* Sources */,
+				361D86881A74C6D5006BA162 /* Frameworks */,
+				361D86891A74C6D5006BA162 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ButtonMatrix;
+			productName = ButtonMatrix;
+			productReference = 361D868B1A74C6D5006BA162 /* ButtonMatrix.app */;
+			productType = "com.apple.product-type.application";
+		};
+		361D869D1A74C6D5006BA162 /* ButtonMatrixTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 361D86AB1A74C6D5006BA162 /* Build configuration list for PBXNativeTarget "ButtonMatrixTests" */;
+			buildPhases = (
+				361D869A1A74C6D5006BA162 /* Sources */,
+				361D869B1A74C6D5006BA162 /* Frameworks */,
+				361D869C1A74C6D5006BA162 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				361D86A01A74C6D5006BA162 /* PBXTargetDependency */,
+			);
+			name = ButtonMatrixTests;
+			productName = ButtonMatrixTests;
+			productReference = 361D869E1A74C6D5006BA162 /* ButtonMatrixTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		361D86831A74C6D5006BA162 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Can;
+				TargetAttributes = {
+					361D868A1A74C6D5006BA162 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					361D869D1A74C6D5006BA162 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 361D868A1A74C6D5006BA162;
+					};
+				};
+			};
+			buildConfigurationList = 361D86861A74C6D5006BA162 /* Build configuration list for PBXProject "ButtonMatrix" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 361D86821A74C6D5006BA162;
+			productRefGroup = 361D868C1A74C6D5006BA162 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				361D868A1A74C6D5006BA162 /* ButtonMatrix */,
+				361D869D1A74C6D5006BA162 /* ButtonMatrixTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		361D86891A74C6D5006BA162 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				361D86961A74C6D5006BA162 /* Images.xcassets in Resources */,
+				361D86991A74C6D5006BA162 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		361D869C1A74C6D5006BA162 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		361D86871A74C6D5006BA162 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				361D86941A74C6D5006BA162 /* main.m in Sources */,
+				361D86921A74C6D5006BA162 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		361D869A1A74C6D5006BA162 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				361D86A51A74C6D5006BA162 /* ButtonMatrixTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		361D86A01A74C6D5006BA162 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 361D868A1A74C6D5006BA162 /* ButtonMatrix */;
+			targetProxy = 361D869F1A74C6D5006BA162 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		361D86971A74C6D5006BA162 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				361D86981A74C6D5006BA162 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		361D86A61A74C6D5006BA162 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		361D86A71A74C6D5006BA162 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		361D86A91A74C6D5006BA162 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ButtonMatrix/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		361D86AA1A74C6D5006BA162 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ButtonMatrix/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		361D86AC1A74C6D5006BA162 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ButtonMatrixTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ButtonMatrix.app/Contents/MacOS/ButtonMatrix";
+			};
+			name = Debug;
+		};
+		361D86AD1A74C6D5006BA162 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ButtonMatrixTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ButtonMatrix.app/Contents/MacOS/ButtonMatrix";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		361D86861A74C6D5006BA162 /* Build configuration list for PBXProject "ButtonMatrix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				361D86A61A74C6D5006BA162 /* Debug */,
+				361D86A71A74C6D5006BA162 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		361D86A81A74C6D5006BA162 /* Build configuration list for PBXNativeTarget "ButtonMatrix" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				361D86A91A74C6D5006BA162 /* Debug */,
+				361D86AA1A74C6D5006BA162 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		361D86AB1A74C6D5006BA162 /* Build configuration list for PBXNativeTarget "ButtonMatrixTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				361D86AC1A74C6D5006BA162 /* Debug */,
+				361D86AD1A74C6D5006BA162 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 361D86831A74C6D5006BA162 /* Project object */;
+}

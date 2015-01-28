@@ -1,0 +1,25 @@
+/* Add Person */
+"ADD_PERSON" = "添加员工";
+
+/* Cancel */
+"CANCEL" = "取消";
+
+/* Edit */
+"EDIT" = "编辑";
+
+/* Keep, but no raise */
+"KEEPNORAISE" = "保留，但涨幅归零";
+
+/* Remove */
+"REMOVE" = "移除";
+
+/* %lu people will be removed. */
+"REMOVE_INF" = "%lu 名员工将被移除";
+
+/* Do you really want to remove these people? */
+"REMOVE_MSG" = "确定要移除这些员工吗？";
+
+/* Remove Person */
+"REMOVE_PERSON" = "移除员工";
+
+

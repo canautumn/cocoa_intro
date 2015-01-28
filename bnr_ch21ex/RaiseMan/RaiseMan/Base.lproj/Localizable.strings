@@ -1,0 +1,25 @@
+/* Add Person */
+"ADD_PERSON" = "Add Person";
+
+/* Cancel */
+"CANCEL" = "Cancel";
+
+/* Edit */
+"EDIT" = "Edit";
+
+/* Keep, but no raise */
+"KEEPNORAISE" = "Keep, but no raise";
+
+/* Remove */
+"REMOVE" = "Remove";
+
+/* %lu people will be removed. */
+"REMOVE_INF" = "%lu people will be removed.";
+
+/* Do you really want to remove these people? */
+"REMOVE_MSG" = "Do you really want to remove these people?";
+
+/* Remove Person */
+"REMOVE_PERSON" = "Remove Person";
+
+

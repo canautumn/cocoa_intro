@@ -9,6 +9,12 @@
 #import "BigLetterView.h"
 #import "NSString+FirstLetter.h"
 
+@interface BigLetterView ()
+
+@property (strong) NSEvent *mouseDownEvent;
+
+@end
+
 @implementation BigLetterView
 
 @synthesize bgColor = _bgColor;
@@ -20,12 +26,12 @@
     
     NSRect bounds = [self bounds];
     if (self.isHighlighted) {
-        self.bgColor = [NSColor blueColor];
+        NSGradient *gr = [[NSGradient alloc] initWithStartingColor:[NSColor whiteColor] endingColor:self.bgColor];
+        [gr drawInRect:bounds relativeCenterPosition:NSZeroPoint];
     } else {
-        self.bgColor = [NSColor yellowColor];
+        [self.bgColor set];
+        [NSBezierPath fillRect:bounds];
     }
-    [self.bgColor set];
-    [NSBezierPath fillRect:bounds];
     
 //    if ([[self window] firstResponder] == self) {
 //        [[NSColor keyboardFocusIndicatorColor] set];
@@ -55,6 +61,8 @@
     self.isHighlighted = NO;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(refreshString) name:NSUserDefaultsDidChangeNotification object:nil];
+    
+    [self registerForDraggedTypes:[NSArray arrayWithObject:NSPasteboardTypeString]];
 }
 
 - (void)refreshString {
@@ -68,7 +76,7 @@
 
 #pragma mark Pasteboard
 
-- (void)writeToPateboard:(NSPasteboard *)pb {
+- (void)writeToPasteboard:(NSPasteboard *)pb {
     [pb clearContents];
     NSPasteboardItem *item = [[NSPasteboardItem alloc] init];
     [item setData:[self dataWithPDFInsideRect:self.bounds] forType:NSPasteboardTypePDF];
@@ -95,7 +103,7 @@
 
 - (IBAction)copy:(id)sender {
     NSPasteboard *pb = [NSPasteboard generalPasteboard];
-    [self writeToPateboard:pb];
+    [self writeToPasteboard:pb];
 }
 
 - (IBAction)paste:(id)sender {
@@ -105,6 +113,185 @@
     }
 }
 
+
+#pragma mark Drag-and-Drop - Source
+
+/* before 10.7 */
+//- (NSDragOperation)draggingSourceOperationMaskForLocal:(BOOL)flag {
+//    return NSDragOperationCopy | NSDragOperationDelete;
+//}
+
+/* after 10.7 */
+- (NSDragOperation)draggingSession:(NSDraggingSession *)session sourceOperationMaskForDraggingContext:(NSDraggingContext)context {
+    return NSDragOperationCopy | NSDragOperationDelete;
+}
+
+- (void)mouseDown:(NSEvent *)theEvent {
+    self.mouseDownEvent = theEvent;
+}
+
+- (void)mouseDragged:(NSEvent *)theEvent {
+    /* before 10.7 */
+//    NSPoint down = [self.mouseDownEvent locationInWindow];
+//    NSPoint drag = [theEvent locationInWindow];
+//    float distance = hypot(down.x - drag.x, down.y - drag.y);
+//    if (distance < 3) {
+//        return;
+//    }
+//    
+//    if ([self.string length] == 0) {
+//        return;
+//    }
+//    
+//    NSSize s = [self.string sizeWithAttributes:self.attributes];
+//    NSImage *anImage = [[NSImage alloc] initWithSize:s];
+//    NSRect imageBounds;
+//    imageBounds.origin = NSZeroPoint;
+//    imageBounds.size = s;
+//    
+//    [anImage lockFocus];
+//    [self drawStringCenteredIn:imageBounds];
+//    [anImage unlockFocus];
+//    
+//    NSPoint p = [self convertPoint:down fromView:nil];
+//    
+//    p.x = p.x - s.width / 2;
+//    p.y = p.y - s.height / 2;
+//    
+//    NSPasteboard *pb = [NSPasteboard pasteboardWithName:NSDragPboard];
+//    
+//    [self writeToPasteboard:pb];
+//    
+//    [self dragImage:anImage
+//                 at:p
+//             offset:NSZeroSize
+//              event:self.mouseDownEvent
+//         pasteboard:pb
+//             source:self
+//          slideBack:YES];
+//
+    
+    /* after 10.7: */
+    
+    NSPoint down = [self.mouseDownEvent locationInWindow];
+    NSPoint drag = [theEvent locationInWindow];
+    float distance = hypot(down.x - drag.x, down.y - drag.y);
+    if (distance < 3) {
+        return;
+    }
+    
+    if ([self.string length] == 0) {
+        return;
+    }
+    
+    NSSize s = [self.string sizeWithAttributes:self.attributes];
+    NSImage *anImage = [[NSImage alloc] initWithSize:s];
+    NSRect imageBounds;
+    imageBounds.origin = NSZeroPoint;
+    imageBounds.size = s;
+    
+    [anImage lockFocus];
+    [self drawStringCenteredIn:imageBounds];
+    [anImage unlockFocus];
+    
+    NSPoint p = [self convertPoint:down fromView:nil];
+    
+    p.x = p.x - s.width / 2;
+    p.y = p.y - s.height / 2;
+    
+    imageBounds.origin = p;
+    
+    /* NSPasteboardItemDataProvider */
+//    NSPasteboardItem *pbItem = [NSPasteboardItem new];
+//    
+//    [pbItem setDataProvider:self forTypes:[NSArray arrayWithObjects:NSPasteboardTypeString, nil]];
+    
+//    NSDraggingItem *item = [[NSDraggingItem alloc] initWithPasteboardWriter:pbItem]
+    
+    NSDraggingItem *item = [[NSDraggingItem alloc] initWithPasteboardWriter:self.string];
+    [item setDraggingFrame:imageBounds contents:anImage];
+    
+    NSDraggingSession *draggingSession = [self beginDraggingSessionWithItems:[NSArray arrayWithObject:item] event:self.mouseDownEvent source:self];
+    
+    draggingSession.animatesToStartingPositionsOnCancelOrFail = YES;
+    
+}
+
+
+/* NSPasteboardItemDataProvider */
+//- (void)pasteboard:(NSPasteboard *)sender provideDataForType:(NSString *)type {
+//    NSLog(@"called");
+//    if ([type compare:NSPasteboardTypeString] == NSOrderedSame) {
+//        [sender setString:self.string forType:NSPasteboardTypeString];
+//    }
+//}
+
+
+/* before 10.7 */
+//- (void)draggedImage:(NSImage *)image endedAt:(NSPoint)screenPoint operation:(NSDragOperation)operation {
+//    if (operation == NSDragOperationDelete) {
+//        self.string = @" ";
+//    }
+//}
+//
+
+/* after 10.7 */
+
+- (void)draggingSession:(NSDraggingSession *)session endedAtPoint:(NSPoint)screenPoint operation:(NSDragOperation)operation {
+    if (operation == NSDragOperationDelete) {
+        self.string = @" ";
+    }
+}
+
+
+#pragma mark Drag-and-Drop - Destination
+
+- (NSDragOperation)draggingEntered:(id<NSDraggingInfo>)sender {
+    NSLog(@"draggingEntered:");
+    if ([sender draggingSource] == self) {
+        return NSDragOperationNone;
+    }
+    self.isHighlighted = YES;
+    self.needsDisplay = YES;
+    return NSDragOperationCopy;
+}
+
+- (void)draggingExited:(id<NSDraggingInfo>)sender {
+    NSLog(@"draggingExited:");
+    self.isHighlighted = NO;
+    self.needsDisplay = YES;
+}
+
+- (BOOL)prepareForDragOperation:(id<NSDraggingInfo>)sender {
+    return YES;
+}
+
+- (BOOL)performDragOperation:(id<NSDraggingInfo>)sender {
+    NSPasteboard *pb = [sender draggingPasteboard];
+    if (![self readFromPasteboard:pb]) {
+        NSLog(@"Error: Could not read from dragging Pasteboard");
+        return NO;
+    }
+    return YES;
+}
+
+- (void)concludeDragOperation:(id<NSDraggingInfo>)sender {
+    NSLog(@"concludeDragOperation:");
+    self.isHighlighted = NO;
+    self.needsDisplay = YES;
+}
+
+
+#pragma mark Dragging Info (Demo only)
+
+- (NSDragOperation)draggingUpdated:(id<NSDraggingInfo>)sender {
+    NSDragOperation op = [sender draggingSourceOperationMask];
+    NSLog(@"operation mask = %ld", op);
+    if ([sender draggingSource] == self) {
+        return NSDragOperationNone;
+    }
+    return NSDragOperationCopy;
+}
 
 
 #pragma mark String Related
@@ -159,23 +346,6 @@
             }
         }
     }];
-}
-
-#pragma mark Mouse Tracking Methods
-
-- (void)viewDidMoveToWindow {
-    [self addTrackingArea:[[NSTrackingArea alloc] initWithRect:NSZeroRect
-                                                       options:(NSTrackingMouseEnteredAndExited | NSTrackingActiveAlways | NSTrackingInVisibleRect)
-                                                         owner:self
-                                                      userInfo:nil]];
-}
-
-- (void)mouseEntered:(NSEvent *)theEvent {
-    self.isHighlighted = YES;
-}
-
-- (void)mouseExited:(NSEvent *)theEvent {
-    self.isHighlighted = NO;
 }
 
 #pragma mark firstResponder Methods

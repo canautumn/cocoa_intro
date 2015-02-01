@@ -13,7 +13,6 @@
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
             <connections>
-                <outlet property="bigLetterView" destination="fp0-5A-SdF" id="I2n-Ai-ZEm"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -630,42 +629,20 @@
         <window title="TypingTutor" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="335" y="390" width="480" height="360"/>
+            <rect key="contentRect" x="335" y="390" width="720" height="350"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
             <view key="contentView" id="EiT-Mj-1SZ">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="360"/>
+                <rect key="frame" x="0.0" y="0.0" width="720" height="350"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fp0-5A-SdF" customClass="BigLetterView">
-                        <rect key="frame" x="20" y="50" width="440" height="290"/>
+                        <rect key="frame" x="20" y="42" width="336" height="288"/>
                         <connections>
-                            <outlet property="nextKeyView" destination="HWD-Yi-ye1" id="eDs-nS-WVf"/>
+                            <outlet property="nextKeyView" destination="ksV-2v-vD4" id="iox-Wl-PAH"/>
                         </connections>
                     </customView>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HWD-Yi-ye1">
-                        <rect key="frame" x="20" y="20" width="137" height="22"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="zvy-bD-wgT">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                        <connections>
-                            <outlet property="nextKeyView" destination="HRL-d6-iBf" id="70q-nR-pf2"/>
-                        </connections>
-                    </textField>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HRL-d6-iBf">
-                        <rect key="frame" x="323" y="20" width="137" height="22"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="cE2-Nw-VAJ">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                        <connections>
-                            <outlet property="nextKeyView" destination="fp0-5A-SdF" id="boQ-PN-Zvx"/>
-                        </connections>
-                    </textField>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wim-09-9QW">
-                        <rect key="frame" x="256" y="22" width="61" height="18"/>
+                        <rect key="frame" x="111" y="18" width="61" height="18"/>
                         <buttonCell key="cell" type="check" title="Italic" bezelStyle="regularSquare" imagePosition="left" inset="2" id="F1A-ir-xNT">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -675,7 +652,7 @@
                         </connections>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6zh-VZ-HFu">
-                        <rect key="frame" x="163" y="22" width="61" height="18"/>
+                        <rect key="frame" x="18" y="18" width="61" height="18"/>
                         <buttonCell key="cell" type="check" title="Bold" bezelStyle="regularSquare" imagePosition="left" inset="2" id="4da-rT-ANa">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
@@ -684,11 +661,18 @@
                             <binding destination="cix-dO-wJr" name="value" keyPath="values.isBold" id="wYr-es-XK1"/>
                         </connections>
                     </button>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ksV-2v-vD4" customClass="BigLetterView">
+                        <rect key="frame" x="364" y="42" width="336" height="288"/>
+                        <connections>
+                            <outlet property="nextKeyView" destination="fp0-5A-SdF" id="eew-5L-eZX"/>
+                        </connections>
+                    </customView>
                 </subviews>
             </view>
             <connections>
                 <outlet property="initialFirstResponder" destination="fp0-5A-SdF" id="oVr-0e-njm"/>
             </connections>
+            <point key="canvasLocation" x="144" y="379"/>
         </window>
         <userDefaultsController representsSharedInstance="YES" id="cix-dO-wJr"/>
     </objects>

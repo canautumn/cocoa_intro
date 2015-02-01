@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface BigLetterView : NSView
+@interface BigLetterView : NSView <NSDraggingSource>
 
 @property (strong) NSColor *bgColor;
 @property (copy) NSString *string;

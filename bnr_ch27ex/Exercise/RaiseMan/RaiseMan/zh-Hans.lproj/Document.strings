@@ -1,0 +1,12 @@
+/* Class = "NSButtonCell"; title = "Remove"; ObjectID = "7GT-98-pDZ"; */
+"7GT-98-pDZ.title" = "移除";
+
+/* Class = "NSTableColumn"; headerCell.title = "Raise"; ObjectID = "H7F-ND-awi"; */
+"H7F-ND-awi.headerCell.title" = "涨幅";
+
+/* Class = "NSTableColumn"; headerCell.title = "Name"; ObjectID = "LeH-WJ-teX"; */
+"LeH-WJ-teX.headerCell.title" = "姓名";
+
+/* Class = "NSButtonCell"; title = "Add Employee"; ObjectID = "vfI-PJ-mSz"; */
+"vfI-PJ-mSz.title" = "添加员工";
+

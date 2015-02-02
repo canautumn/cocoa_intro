@@ -1,0 +1,12 @@
+/* Class = "NSButtonCell"; title = "Reset Preferences"; ObjectID = "28a-wO-r5g"; */
+"28a-wO-r5g.title" = "重置设定";
+
+/* Class = "NSButtonCell"; title = "Automatically open untitled document"; ObjectID = "N48-fl-fNo"; */
+"N48-fl-fNo.title" = "启动时自动打开空白文档";
+
+/* Class = "NSTextFieldCell"; title = "Table background color"; ObjectID = "td9-qZ-Rdp"; */
+"td9-qZ-Rdp.title" = "表格背景颜色";
+
+/* Class = "NSPanel"; title = "Preferences"; ObjectID = "tjw-40-szg"; */
+"tjw-40-szg.title" = "Preferences";
+

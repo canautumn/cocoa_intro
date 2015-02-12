@@ -1,0 +1,431 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		36449AF71A8C461B005B6379 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36449AF61A8C461B005B6379 /* AppDelegate.m */; };
+		36449AF91A8C461B005B6379 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36449AF81A8C461B005B6379 /* main.m */; };
+		36449AFC1A8C461B005B6379 /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 36449AFB1A8C461B005B6379 /* Document.m */; };
+		36449AFF1A8C461B005B6379 /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36449AFD1A8C461B005B6379 /* Document.xib */; };
+		36449B011A8C461B005B6379 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36449B001A8C461B005B6379 /* Images.xcassets */; };
+		36449B041A8C461B005B6379 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36449B021A8C461B005B6379 /* MainMenu.xib */; };
+		36449B101A8C461B005B6379 /* ZIPspectorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36449B0F1A8C461B005B6379 /* ZIPspectorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		36449B0A1A8C461B005B6379 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36449AE81A8C461B005B6379 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36449AEF1A8C461B005B6379;
+			remoteInfo = ZIPspector;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		36449AF01A8C461B005B6379 /* ZIPspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZIPspector.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36449AF41A8C461B005B6379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36449AF51A8C461B005B6379 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		36449AF61A8C461B005B6379 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		36449AF81A8C461B005B6379 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		36449AFA1A8C461B005B6379 /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
+		36449AFB1A8C461B005B6379 /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
+		36449AFE1A8C461B005B6379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/Document.xib; sourceTree = "<group>"; };
+		36449B001A8C461B005B6379 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		36449B031A8C461B005B6379 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		36449B091A8C461B005B6379 /* ZIPspectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZIPspectorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		36449B0E1A8C461B005B6379 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36449B0F1A8C461B005B6379 /* ZIPspectorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZIPspectorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		36449AED1A8C461B005B6379 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36449B061A8C461B005B6379 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36449AE71A8C461B005B6379 = {
+			isa = PBXGroup;
+			children = (
+				36449AF21A8C461B005B6379 /* ZIPspector */,
+				36449B0C1A8C461B005B6379 /* ZIPspectorTests */,
+				36449AF11A8C461B005B6379 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		36449AF11A8C461B005B6379 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36449AF01A8C461B005B6379 /* ZIPspector.app */,
+				36449B091A8C461B005B6379 /* ZIPspectorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36449AF21A8C461B005B6379 /* ZIPspector */ = {
+			isa = PBXGroup;
+			children = (
+				36449AF51A8C461B005B6379 /* AppDelegate.h */,
+				36449AF61A8C461B005B6379 /* AppDelegate.m */,
+				36449AFA1A8C461B005B6379 /* Document.h */,
+				36449AFB1A8C461B005B6379 /* Document.m */,
+				36449AFD1A8C461B005B6379 /* Document.xib */,
+				36449B001A8C461B005B6379 /* Images.xcassets */,
+				36449B021A8C461B005B6379 /* MainMenu.xib */,
+				36449AF31A8C461B005B6379 /* Supporting Files */,
+			);
+			path = ZIPspector;
+			sourceTree = "<group>";
+		};
+		36449AF31A8C461B005B6379 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				36449AF41A8C461B005B6379 /* Info.plist */,
+				36449AF81A8C461B005B6379 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		36449B0C1A8C461B005B6379 /* ZIPspectorTests */ = {
+			isa = PBXGroup;
+			children = (
+				36449B0F1A8C461B005B6379 /* ZIPspectorTests.m */,
+				36449B0D1A8C461B005B6379 /* Supporting Files */,
+			);
+			path = ZIPspectorTests;
+			sourceTree = "<group>";
+		};
+		36449B0D1A8C461B005B6379 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				36449B0E1A8C461B005B6379 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		36449AEF1A8C461B005B6379 /* ZIPspector */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36449B131A8C461B005B6379 /* Build configuration list for PBXNativeTarget "ZIPspector" */;
+			buildPhases = (
+				36449AEC1A8C461B005B6379 /* Sources */,
+				36449AED1A8C461B005B6379 /* Frameworks */,
+				36449AEE1A8C461B005B6379 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZIPspector;
+			productName = ZIPspector;
+			productReference = 36449AF01A8C461B005B6379 /* ZIPspector.app */;
+			productType = "com.apple.product-type.application";
+		};
+		36449B081A8C461B005B6379 /* ZIPspectorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36449B161A8C461B005B6379 /* Build configuration list for PBXNativeTarget "ZIPspectorTests" */;
+			buildPhases = (
+				36449B051A8C461B005B6379 /* Sources */,
+				36449B061A8C461B005B6379 /* Frameworks */,
+				36449B071A8C461B005B6379 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36449B0B1A8C461B005B6379 /* PBXTargetDependency */,
+			);
+			name = ZIPspectorTests;
+			productName = ZIPspectorTests;
+			productReference = 36449B091A8C461B005B6379 /* ZIPspectorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		36449AE81A8C461B005B6379 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Can;
+				TargetAttributes = {
+					36449AEF1A8C461B005B6379 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					36449B081A8C461B005B6379 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 36449AEF1A8C461B005B6379;
+					};
+				};
+			};
+			buildConfigurationList = 36449AEB1A8C461B005B6379 /* Build configuration list for PBXProject "ZIPspector" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 36449AE71A8C461B005B6379;
+			productRefGroup = 36449AF11A8C461B005B6379 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				36449AEF1A8C461B005B6379 /* ZIPspector */,
+				36449B081A8C461B005B6379 /* ZIPspectorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		36449AEE1A8C461B005B6379 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36449AFF1A8C461B005B6379 /* Document.xib in Resources */,
+				36449B011A8C461B005B6379 /* Images.xcassets in Resources */,
+				36449B041A8C461B005B6379 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36449B071A8C461B005B6379 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36449AEC1A8C461B005B6379 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36449AFC1A8C461B005B6379 /* Document.m in Sources */,
+				36449AF91A8C461B005B6379 /* main.m in Sources */,
+				36449AF71A8C461B005B6379 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36449B051A8C461B005B6379 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36449B101A8C461B005B6379 /* ZIPspectorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		36449B0B1A8C461B005B6379 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36449AEF1A8C461B005B6379 /* ZIPspector */;
+			targetProxy = 36449B0A1A8C461B005B6379 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		36449AFD1A8C461B005B6379 /* Document.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36449AFE1A8C461B005B6379 /* Base */,
+			);
+			name = Document.xib;
+			sourceTree = "<group>";
+		};
+		36449B021A8C461B005B6379 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36449B031A8C461B005B6379 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		36449B111A8C461B005B6379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		36449B121A8C461B005B6379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		36449B141A8C461B005B6379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ZIPspector/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		36449B151A8C461B005B6379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ZIPspector/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		36449B171A8C461B005B6379 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ZIPspectorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZIPspector.app/Contents/MacOS/ZIPspector";
+			};
+			name = Debug;
+		};
+		36449B181A8C461B005B6379 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = ZIPspectorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZIPspector.app/Contents/MacOS/ZIPspector";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		36449AEB1A8C461B005B6379 /* Build configuration list for PBXProject "ZIPspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36449B111A8C461B005B6379 /* Debug */,
+				36449B121A8C461B005B6379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36449B131A8C461B005B6379 /* Build configuration list for PBXNativeTarget "ZIPspector" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36449B141A8C461B005B6379 /* Debug */,
+				36449B151A8C461B005B6379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		36449B161A8C461B005B6379 /* Build configuration list for PBXNativeTarget "ZIPspectorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36449B171A8C461B005B6379 /* Debug */,
+				36449B181A8C461B005B6379 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 36449AE81A8C461B005B6379 /* Project object */;
+}

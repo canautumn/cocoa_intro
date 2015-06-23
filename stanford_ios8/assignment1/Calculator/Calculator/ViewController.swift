@@ -47,13 +47,13 @@ class ViewController: UIViewController {
         }
         appendLineToHistoryDisplay(sender.currentTitle!)
         switch sender.titleLabel!.text! {
-        case "×": performOperation { $0 * $1 }
+        case "×": performOperation(*)
         case "÷": performOperation { $1 / $0 }
-        case "+": performOperation { $0 + $1 }
+        case "+": performOperation { $0 + $1 } // (+) doesn't work if performOperation is overloaded with one parameter. No idea why
         case "−": performOperation { $1 - $0 }
-        case "√": performOperation { sqrt($0) }
-        case "sin": performOperation { sin($0) }
-        case "cos": performOperation { cos($0) }
+        case "√": performOperation(sqrt)
+        case "sin": performOperation(sin)
+        case "cos": performOperation(cos)
         case "π": performOperation { M_PI }
         case "+/−": performOperation { -$0 }
         default: break

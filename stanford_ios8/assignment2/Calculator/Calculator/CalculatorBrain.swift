@@ -14,6 +14,8 @@ class CalculatorBrain {
         case Operand(Double)
         case UnaryOperation(String, Double -> Double)
         case BinaryOperation(String, (Double, Double) -> Double)
+        case Constant(String, Double)
+        case Variable(String)
         
         var description: String {
             get {
@@ -24,6 +26,10 @@ class CalculatorBrain {
                     return "\(symbol)"
                 case .BinaryOperation(let symbol, _):
                     return "\(symbol)"
+                case .Constant(let symbol, _):
+                    return "\(symbol)"
+                case .Variable(let symbol):
+                    return "\(symbol)"
                 }
             }
         }
@@ -33,21 +39,30 @@ class CalculatorBrain {
     
     private var knownOps = [String: Op]()
     
+    var variables = [String: Double]()
+    
     init() {
         func learnOp(op: Op) {
             knownOps[op.description] = op
         }
-        learnOp(Op.BinaryOperation("×", *));
-        learnOp(Op.BinaryOperation("÷") { $1 / $0 });
-        learnOp(Op.BinaryOperation("+", +));
-        learnOp(Op.BinaryOperation("−", { $1 - $0 }));
-        learnOp(Op.UnaryOperation("√", sqrt));
-        learnOp(Op.UnaryOperation("sin", sin));
-        learnOp(Op.UnaryOperation("cos", cos));
+        learnOp(Op.BinaryOperation("×", *))
+        learnOp(Op.BinaryOperation("÷") { $1 / $0 })
+        learnOp(Op.BinaryOperation("+", +))
+        learnOp(Op.BinaryOperation("−", { $1 - $0 }))
+        learnOp(Op.UnaryOperation("√", sqrt))
+        learnOp(Op.UnaryOperation("sin", sin))
+        learnOp(Op.UnaryOperation("cos", cos))
+        
+        learnOp(Op.Constant("π", M_PI))
     }
     
     func pushOperand(operand: Double) -> Double? {
         opStack.append(Op.Operand(operand))
+        return evaluate()
+    }
+    
+    func pushOperand(symbol: String) -> Double? {
+        opStack.append(Op.Variable(symbol))
         return evaluate()
     }
     
@@ -77,6 +92,12 @@ class CalculatorBrain {
                     if let operand2 = op2Evaluation.result {
                         return (operation(operand1, operand2), op2Evaluation.remainingOps)
                     }
+                }
+            case .Constant(_, let operand):
+                return (operand, remainingOps)
+            case .Variable(let variableName):
+                if let operand = variables[variableName] {
+                    return (operand, remainingOps)
                 }
             }
         }

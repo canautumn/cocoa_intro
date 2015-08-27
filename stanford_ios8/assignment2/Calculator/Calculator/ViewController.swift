@@ -20,20 +20,20 @@ class ViewController: UIViewController {
         if userIsInTheMiddleOfEntering {
             // place the decimal check here so that the user can start entering by pressing "."
             if sender.currentTitle! == "." && display.text!.rangeOfString(".") != nil { return }
-            display.text! = display.text! + sender.titleLabel!.text!
+            display.text! = display.text! + sender.currentTitle!
         } else {
-            display.text! = sender.titleLabel!.text!
+            display.text! = sender.currentTitle!
             userIsInTheMiddleOfEntering = true
         }
     }
     
     @IBAction func enter() {
-        if let operand = currentValue {
-            appendLineToHistoryDisplay(String(format: "%.15g", currentValue!))
+        if let operand = displayValue {
+            appendLineToHistoryDisplay(String(format: "%.15g", displayValue!))
             if let result = brain.pushOperand(operand) {
-                currentValue = result
+                displayValue = result
             } else {
-                currentValue = 0
+                displayValue = 0
                 appendLineToHistoryDisplay("ERROR")
             }
         }
@@ -57,16 +57,16 @@ class ViewController: UIViewController {
         if let operation = sender.currentTitle {
             appendLineToHistoryDisplay(operation)
             if let result = brain.performOperation(operation) {
-                currentValue = result
+                displayValue = result
                 appendLineToHistoryDisplay("=" + display.text!)
             } else {
-                currentValue = 0
+                displayValue = 0
                 appendLineToHistoryDisplay("ERROR")
             }
         }
     }
     
-    var currentValue: Double? {
+    var displayValue: Double? {
         get {
             if let number = NSNumberFormatter().numberFromString(display.text!) {
                 return number.doubleValue
@@ -79,14 +79,14 @@ class ViewController: UIViewController {
                 // using %.g formatting avoids trailing zeros (e.g., 0.0)
                 display.text! = String(format: "%.15g", doubleValue)
             } else {
-                clear()
+                display.text! = "0" // should it clear the stack?
             }
             userIsInTheMiddleOfEntering = false // may be unnecessary for now
         }
     }
     
     @IBAction func clear() {
-        currentValue = 0
+        displayValue = 0
         historyDisplay.text! = ""
         // TODO
 //        operandStack.removeAll()
@@ -105,10 +105,10 @@ class ViewController: UIViewController {
         if display.text!.characters.count > 1 {
             display.text! = String(dropLast(display.text!.characters))
             if display.text! == "-" {
-                currentValue = 0
+                displayValue = 0
             }
         } else {
-            currentValue = 0
+            displayValue = 0
         }
     }
 }
